@@ -15,7 +15,7 @@ The widget shows the current time and date, the next alarm (if any), and upcomin
 Android 7.0 (SDK 24) or newer
 
 ## License
-Copyright (C) 2022 Federico Dossena
+Copyright (C) 2022 Federico Dossena<br>
 Copyright (C) 2026 Siegfried & TorettoALFA
 
 This program is free software: you can redistribute it and/or modify
