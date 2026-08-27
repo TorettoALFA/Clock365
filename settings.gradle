@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Clock31"
+rootProject.name = "Clock365"
 include ':app'

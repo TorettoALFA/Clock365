@@ -1,30 +1,49 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    compileSdk 32
+    namespace 'com.siegfried.clock365'
+    compileSdk 35
 
     defaultConfig {
-        applicationId "com.dosse.clock31"
-        minSdk 21
-        targetSdk 32
-        versionCode 5
-        versionName '1.0.3'
+        applicationId "com.siegfried.clock365"
+        minSdk 24
+        targetSdk 35
+        versionCode 6
+        versionName '1.1.0'
+    }
+
+    signingConfigs {
+        clock365 {
+            // Keystore lives outside the project (path contains a space).
+            storeFile = rootProject.file("E:/Download App/Clock365-key.jks")
+            // Credentials are read from the environment so the raw password
+            // never has to be typed into build.gradle (Gradle's Groovy lexer
+            // mis-parses the special characters in the real password).
+            storePassword = System.getenv('CLOCK365_STORE_PASSWORD')
+            keyAlias = 'clock365key'
+            keyPassword = System.getenv('CLOCK365_KEY_PASSWORD')
+            // Defaults to PKCS12, which matches this keystore's format.
+        }
     }
 
     buildTypes {
         release {
+            signingConfig signingConfigs.clock365
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
     }
     buildFeatures {
         viewBinding true
     }
 }
-

@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.dosse.clock31">
+    tools:targetApi="35">
 
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!--probably not necessary-->
-    <uses-permission android:name="android.permission.SET_ALARM" /> <!--probably not necessary-->
 
     <queries>
         <package android:name="com.android.deskclock" />
@@ -17,11 +15,11 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Clock31"
-        tools:targetApi="31">
+        android:theme="@style/Theme.Clock365"
+        tools:targetApi="35">
 
         <receiver
-            android:name=".C31Widget"
+            android:name=".Clock365Widget"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.app.action.NEXT_ALARM_CLOCK_CHANGED" />
@@ -32,7 +30,7 @@
                 <action android:name="android.intent.action.LOCALE_CHANGED"/>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
                 <action android:name="com.android.deskclock.NEXT_ALARM_TIME_SET"/>
-                <action android:name="com.dosse.clock31.ACTION_REFRESH"/>
+                <action android:name="com.siegfried.clock365.ACTION_REFRESH"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.PROVIDER_CHANGED"/>
@@ -41,15 +39,15 @@
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/c31_widget_info" />
+                android:resource="@xml/clock365_widget_info" />
         </receiver>
 
-        <service android:name=".CalendarRemoteViewsService"
+        <service android:name=".Clock365RemoteViewsService"
             android:permission="android.permission.BIND_REMOTEVIEWS">
         </service>
 
         <activity
-            android:name=".C31WidgetConfigureActivity"
+            android:name=".Clock365WidgetConfigureActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />

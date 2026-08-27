@@ -1,7 +1,7 @@
-# Clock 31
+# Clock365
 ![Screenshot](.github/screenshot1.png)
 
-Clock 31 is a Clock + Calendar combo widget for Android, inspired by (but not forked from) the cLock widget found in old versions of LineageOS.
+Clock365 is a Clock + Calendar combo widget for Android, inspired by (but not forked from) the cLock widget found in old versions of LineageOS.
 
 The widget shows the current time and date, the next alarm (if any), and upcoming events for all your calendars (the colors on the left indicates the calendar to which they belong). Some useful shortcuts are also provided: tapping the clock will bring you to the clock and alarm app, tapping the calendar icon will open the calendar, tapping an event will bring you to the details of that event.
 
@@ -9,9 +9,9 @@ The widget shows the current time and date, the next alarm (if any), and upcomin
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
-     height="80">](https://f-droid.org/packages/com.dosse.clock31/)
+     height="80">](https://f-droid.org/packages/com.siegfried.clock365/)
 
-Or [download the APK](https://downloads.fdossena.com/geth.php?r=clock31-apk).
+Or [download the APK](https://downloads.fdossena.com/geth.php?r=clock365-apk).
 
 ## Compatibility
 Android 5.0 (SDK 21) or newer
